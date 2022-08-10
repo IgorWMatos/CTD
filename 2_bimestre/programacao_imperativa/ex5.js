@@ -132,3 +132,5 @@ identificarVariavelAntiga(variavelAntiga);
 // estudo de Math
 
 console.log(Math.PI);
+
+console.log(Math.PI + 3);
