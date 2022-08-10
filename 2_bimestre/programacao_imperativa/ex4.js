@@ -10,4 +10,4 @@ let plano = true;
 
 let imc = peso / (altura * altura);
 
-console.log(nome + " Tem " + idade + " anos e seu índice de massa corporal é " + imc)
+console.log(nome + " tem " + idade + " anos e seu índice de massa corporal é " + imc)
