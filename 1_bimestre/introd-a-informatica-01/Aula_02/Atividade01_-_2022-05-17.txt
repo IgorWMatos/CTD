@@ -1,0 +1,23 @@
+$ history
+    1  mkdir root
+    2  cd root
+    3  mkdir folder1
+    4  mkdir folder2
+    5  mkdir folder3
+    6  touch move1.txt
+    7  touch move3.txt
+    8  mv move1.txt folder1/
+    9  mv move3.txt folder3/
+   10  cd folder1
+   11  touch create1
+   12  rm create1
+   13  touch create1.txt
+   14  touch delete1.txt
+   15  rm delete1.txt
+   16  cd ../
+   17  cd folder3/
+   18  touch create3.txt
+   19  touch delete3.txt
+   20  rm delete3.txt
+   21  cd ../
+   22  history
