@@ -3,14 +3,11 @@ console.log(Math.random());
 
 // criando função cumprimentar
 
-let nome = "José";
-let sobrenome = "da Silva";
-
-function cumprimentar() {
+function cumprimentar(nome, sobrenome) {
     console.log("Olá, " + nome + ' ' + sobrenome + ' ' + "seja bem vindo!");
 }
 
-cumprimentar()
+cumprimentar("José", "da Silva")
 
 // exemplo PlayGround
 
@@ -40,23 +37,19 @@ console.log(valor)
 
 // polegadas em centimetros
 
-let polegadas = 19;
-
-function polegasEmCentrimentros() {
+function polegasEmCentrimentros(polegadas) {
     return console.log(polegadas * 2.54)
 };
 
-polegasEmCentrimentros()
+polegasEmCentrimentros(19)
 
 // function com string que retorne URL
 
-let site = 'minhaurl';
-
-function URLconvert() {
+function URLconvert(site) {
     return console.log('www.' + site + '.com.br')
 };
 
-URLconvert()
+URLconvert("minhaurl")
 
 // function com caractére de exclamação
 
@@ -70,44 +63,31 @@ colocarExclamacao()
 
 // calcular idade cachorro
 
-let anoHumano = 4;
-
-function calcularIdadeCachorro() {
+function calcularIdadeCachorro(anoHumano) {
     return console.log(anoHumano * 7)
 }
 
-calcularIdadeCachorro()
+calcularIdadeCachorro(4)
 
 // calculo valor hora de trabalho
 
-let salarioMinimo = 998
-
-function valorHora() {
+function valorHora(salarioMinimo) {
     return console.log(salarioMinimo / 160)
 }
 
-valorHora()
+valorHora(998)
 
 // calculo IMC
-
-let peso = 90;
-let altura = 1.70;
 
 function calculoIMC(peso, altura) {
     return console.log('Seu IMC de acordo com peso e altura é de ' + (peso / (altura * altura)))
 }
 
-calculoIMC(peso, altura);
+calculoIMC(60, 1.65);
 
-peso = 90;
-altura = 1.90;
+calculoIMC(75, 1.75);
 
-calculoIMC(peso, altura);
-
-peso = 60;
-altura = 1.80;
-
-calculoIMC(peso, altura);
+calculoIMC(50, 1.60);
 
 // estudo da função .toUpperCase()
 
@@ -121,15 +101,15 @@ upperCase(frase);
 
 // estudo da função typeOf
 
-let variavelAntiga = 'Norte'
-
 function identificarVariavelAntiga(variavelAntiga) {
     return console.log('A variável antiga é um (a) ' + typeof (variavelAntiga));
 };
 
-identificarVariavelAntiga(variavelAntiga);
+identificarVariavelAntiga("Norte");
 
 // estudo de Math
+
+console.log(Math.random());
 
 console.log(Math.PI);
 
