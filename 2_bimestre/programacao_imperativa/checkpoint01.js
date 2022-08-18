@@ -14,4 +14,4 @@ function microondas(prato, tempo) {
     }
 }
 
-microondas(feijao, 12)
+microondas(pipoca, 10)
