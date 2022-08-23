@@ -77,7 +77,3 @@ console.log('-------------------------------------------------------------------
 console.log('coleção de filmes');
 
 let filmes = ["star wars", "matrix", "mr. robot", "o preço do amanhã", "a vida é bela"];
-
-function transformarMaiuscula(x) {
-
-};
