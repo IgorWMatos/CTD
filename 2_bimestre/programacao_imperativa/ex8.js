@@ -77,3 +77,45 @@ console.log('-------------------------------------------------------------------
 console.log('coleção de filmes');
 
 let filmes = ["star wars", "matrix", "mr. robot", "o preço do amanhã", "a vida é bela"];
+
+function upperText(filmes) {
+    x = filmes;
+    xResult = x.toString().toUpperCase();
+    return xResult;
+};
+
+console.log(upperText(filmes));
+
+console.log('-------------------------------------------------------------------------------');
+console.log('coleção de filmes 2');
+
+let filme = ["Toy Story", "Procurando Nemo", "Kung-fu Panda", "Wally", "Fortnite"];
+
+function unirFilmes(filmes, filme) {
+    let sFilmes = filmes.concat(filme);
+    return console.log(sFilmes);
+};
+
+unirFilmes(filmes, filme);
+
+console.log('-------------------------------------------------------------------------------');
+console.log('removendo string errada da array');
+
+let sFilmes = filmes.concat(filme);
+let backupLastItem = sFilmes.pop();
+
+console.log(sFilmes);
+console.log(backupLastItem);
+
+console.log('-------------------------------------------------------------------------------');
+console.log('comparando arrays');
+
+const asiaScores = [8, 10, 6, 9, 10, 6, 6, 8, 4];
+const euroScores = [8, 10, 6, 8, 10, 6, 7, 9, 5];
+
+function scoresComparative(asiaScores, euroScores) {
+    return console.log(asiaScores === euroScores);
+};
+
+scoresComparative(asiaScores[1], euroScores[1]);
+scoresComparative(asiaScores[3], euroScores[3]);
