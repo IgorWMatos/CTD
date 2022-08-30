@@ -22,15 +22,15 @@ const conta = {
 const dados = [
     {
         "titular": "Abigael Natte",
-        "numero": 5486273622,
-        "tipo": "Conta Corrente",
+        "nConta": 5486273622,
+        "tipoConta": "Conta Corrente",
         "saldo": 27771
     },
 
     {
         "titular": "Ramon Connell",
-        "numero": 1183971869,
-        "tipo": "Conta Poupança",
+        "nConta": 1183971869,
+        "tipoConta": "Conta Poupança",
         "saldo": 8675
     },
 
@@ -43,5 +43,10 @@ function Banco(titular, nConta, tipoConta, saldo) {
     this.saldo = saldo;
 }
 
-let conta1 = new Banco('fulano', 124623, 'corrrente', 1500.95)
-console.log(conta1);
+let conta1 = new Banco(dados[0].titular, dados[0].nConta, dados[0].tipoConta, dados[0].saldo);
+let listaContas = [];
+for (let contador = 0; contador < dados.length; contador++) {
+    listaContas.push(new Banco(dados[contador].titular, dados[contador].nConta, dados[contador].tipoConta, dados[contador].saldo))
+}
+
+console.log(listaContas)
