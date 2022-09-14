@@ -11,12 +11,21 @@ function loopDePares(n) {
 loopDePares(0); 
 */
 
-function loopDeImpares(n, str) {
-    str = 'é impar.';
-    for (let i = 1; i <= 100; i++) {
+//ex2
+
+/*
+let str = '';
+let loopDeImpares = (n, str) => {
+    for (let i = 0; i <= 100; i++) {
         if ((i + n) % 2 !== 0) {
-            console.log('Esse número ' + i + str)
+            str = ' é par.';
+            console.log(str)
+        } else {
+            console.log(i)
         }
     }
 }
-loopDeImpares(0, str); 
+loopDeImpares(101, str);
+*/
+
+//ex 3
