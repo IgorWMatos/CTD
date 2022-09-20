@@ -61,8 +61,6 @@ let pessoas = [
     }
 ]
 
-const lista = require('lista')
-
 //1
 const maisAlta = pessoas.reduce(function (menor, maior) {
     return menor.altura < maior.altura ? maior : menor;
