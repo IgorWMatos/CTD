@@ -20,6 +20,6 @@ function Espectator(opinion, age){
     this.age = age
 }
 
-lista.push(new Espectator(1,64));
+lista.push(new Espectator(1, 64));
 
-console.log(Espectator(15));
+console.log(lista[15]);
