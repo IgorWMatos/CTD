@@ -1,18 +1,27 @@
 let novosAlunos = require('./modules/construtorDeAlunos_cp3'); //função construtora de alunos
-let alunos = require('./modules/alunos_cp3'); //lista de alunos
-
-console.log(alunos)
+let alunos = require('./modules/estudantes'); //lista de alunos
 
 let curso = {
-    nomeDoCurso : "CTD",
-    notaDeAprovacao : 7,
-    faltasMaximas : 6,
-    listaDeEstudantes : alunos,
-    novoEstudante : function(nome, qtdFaltas, nota) {
-        this.listaDeEstudantes.push(new novosAlunos(nome, qtdFaltas, nota))
+    nomeDoCurso: "CTD",
+    notaDeAprovacao: 7,
+    faltasMaximas: 6,
+    listaDeEstudantes: alunos,
+    novoEstudante: function (nome, qtdFaltas, nota) { this.listaDeEstudantes.push(new novosAlunos(nome, qtdFaltas, nota)) },
+    aprovacaoCurso: function (alunos) {
+        let a = alunos;
+        if (a.calcularMedia >= this.notaDeAprovacao && a.quantidadeDeFaltas < this.faltasMaximas) {
+            return true
+        } else if (a.calcularMedia >= this.notaDeAprovacao * 1.1 && a.quantidadeDeFaltas == this.faltasMaximas) {
+            return true
+        } else {
+            return false
+        }
+    },
+    aprovacaoClasse: function () {
+        let alunosAprovados = [];
+        this.listaDeEstudantes.forEach(alunos => alunosAprovados.push(this.aprovacaoCurso(alunos)));
+        return alunosAprovados;
     }
 }
-curso.novoEstudante("Paulo", 0, [3, 9, 9])
-console.log(curso)
 
-/* console.log(curso.novoEstudante('Pedro', 1, [9, 3, 10])) */
+console.log(curso)
