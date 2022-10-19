@@ -1,7 +1,4 @@
-// app.js
-
-// Complete logic of game inside this function
-const game = () => {
+    const game = () => {
     let playerScore = 0;
     let computerScore = 0;
     let moves = 0;
@@ -13,7 +10,7 @@ const game = () => {
         const paperBtn = document.querySelector('.paper');
         const scissorBtn = document.querySelector('.scissor');
         const playerOptions = [rockBtn, paperBtn, scissorBtn];
-        const computerOptions = ['rock', 'paper', 'scissors']
+        const computerOptions = ['pedra', 'papel', 'tesoura']
 
         // Function to start playing game
         playerOptions.forEach(option => {
@@ -21,7 +18,7 @@ const game = () => {
 
                 const movesLeft = document.querySelector('.movesleft');
                 moves++;
-                movesLeft.innerText = `Moves Left: ${10 - moves}`;
+                movesLeft.innerText = `Movimentos restantes: ${10 - moves}`;
 
 
                 const choiceNumber = Math.floor(Math.random() * 3);
@@ -47,38 +44,38 @@ const game = () => {
         player = player.toLowerCase();
         computer = computer.toLowerCase();
         if (player === computer) {
-            result.textContent = 'Tie'
+            result.textContent = 'Empate'
         }
-        else if (player == 'rock') {
-            if (computer == 'paper') {
-                result.textContent = 'Computer Won';
+        else if (player == 'pedra') {
+            if (computer == 'papel') {
+                result.textContent = 'CPU Venceu';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
 
             } else {
-                result.textContent = 'Player Won'
+                result.textContent = 'Jogador Venceu'
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
             }
         }
-        else if (player == 'scissors') {
-            if (computer == 'rock') {
-                result.textContent = 'Computer Won';
+        else if (player == 'tesoura') {
+            if (computer == 'pedra') {
+                result.textContent = 'CPU Venceu';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
             } else {
-                result.textContent = 'Player Won';
+                result.textContent = 'Jogador Venceu';
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
             }
         }
         else if (player == 'paper') {
             if (computer == 'scissors') {
-                result.textContent = 'Computer Won';
+                result.textContent = 'CPU Venceu';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
             } else {
-                result.textContent = 'Player Won';
+                result.textContent = 'Jogador Venceu';
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
             }
@@ -97,25 +94,25 @@ const game = () => {
         })
 
 
-        chooseMove.innerText = 'Game Over!!'
+        chooseMove.innerText = 'Fim de Jogo!!'
         movesLeft.style.display = 'none';
 
         if (playerScore > computerScore) {
-            result.style.fontSize = '2rem';
-            result.innerText = 'You Won The Game'
+            result.style.fontSize = '4rem';
+            result.innerText = 'Você Ganhou'
             result.style.color = '#308D46';
         }
         else if (playerScore < computerScore) {
-            result.style.fontSize = '2rem';
-            result.innerText = 'You Lost The Game';
+            result.style.fontSize = '4rem';
+            result.innerText = 'Você Perdeu';
             result.style.color = 'red';
         }
         else {
-            result.style.fontSize = '2rem';
-            result.innerText = 'Tie';
+            result.style.fontSize = '4rem';
+            result.innerText = 'Empate';
             result.style.color = 'grey'
         }
-        reloadBtn.innerText = 'Restart';
+        reloadBtn.innerText = 'Recomeçar';
         reloadBtn.style.display = 'flex'
         reloadBtn.addEventListener('click', () => {
             window.location.reload();
