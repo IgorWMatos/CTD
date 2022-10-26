@@ -17,6 +17,13 @@ h1 {
   font-size: 3em;
 }
 
+novoh1 {
+  text-align: center;
+  margin: 2em 0;
+  color: rgb(255, 0, 0);
+  font-size: 3em;
+}
+
 ul {
   display: flex;
   list-style: none;
