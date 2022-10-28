@@ -7,7 +7,59 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(219, 219, 219);
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+#darkModeToggle {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 14px;
+	width: 40px;
+	transform: scale(1.5);
+  border: rgb(139, 139, 139) 1px solid;
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+  top: 2px;
+	left: 2px;
+	height: 20px;
+	width: 20px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
 }
 
 h1 {
@@ -44,38 +96,21 @@ h1 {
   margin-bottom: .2em;
 }
 
-.dark
-{
+body.dark {
   background-color: rgb(39, 39, 39);
 }
 
-.dark h1 { 
+body.dark h1 {
   background-color: rgb(19, 19, 19);
   color: rgb(170, 170, 170);
   border-color: black;
 }
 
-.dark .item {
+body.dark .item {
   background-color: rgb(19, 19, 19);
   border-color: black;
 }
 
-.dark h2 p {
+body.dark h2 p {
   color: rgb(230, 230, 230);
 }
-
-/* ------------------------------ Estilos para o tema escuro (Dark-Mode) ----------------------------------------------- */
-
-/* Os seguintes estilos são os que usaremos para aplicar o modo escuro, 
-você terá que modificar os seletores a fim de poder resolver o exercício.
-
-// A cor de fundo 
-
-
-// Modificações no titulo 'A família dos felinos'
-
-// Modificações nos items
-
-// Modificações nos textos dos itens e cabeçalhos dos itens
-
-*/

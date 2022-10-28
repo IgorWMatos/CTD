@@ -1,2 +1,5 @@
-let bodyDarkMode = document.querySelector('body');
-bodyDarkMode.classList.toggle('bodyDark');
+const checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+});

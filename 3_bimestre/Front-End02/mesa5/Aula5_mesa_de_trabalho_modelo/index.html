@@ -7,12 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Aula 5 - Modificar elementos com JS </title>
-  <script src="./scripts/darkmode.js"></script>
+  <script src="./scripts/darkmode.js" defer></script>
+  <script src="https://kit.fontawesome.com/55050bb164.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body class="dark">
 
-  <h1>A família dos felinos</h1>
+  <div id="darkModeToggle">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
+  </div>
+
+    <h1>A família dos felinos</h1>
 
   <div class="container">
     <div class="item">
