@@ -5,15 +5,15 @@ formulario.innerHTML += `
 <div class="form">
 <div class="nome">
 <label for="nome">Nome:</label>
-<input type="text" id="nome" />
+<input type="text" id="nome" class="preencher" />
 </div>
 <div class="sobrenome">
 <label for="sobrenome">Sobrenome:</label>
-<input type="text" id="sobrenome" />
+<input type="text" id="sobrenome" class="preencher" />
 </div>
 <div class="email">
 <label for="email">E-mail:</label>
-<input type="email" id="email" />
+<input type="email" id="email" class="preencher" />
 </div>
 <div class="buttons">
 <button type="submit" class="botao">Enviar</button>
@@ -22,4 +22,26 @@ formulario.innerHTML += `
 </div>
 </form>`;
 
-let dados = 
+//interrupção do formulário
+function eventSubmit(event) {
+    event.preventDefault();
+};
+
+formulario.addEventListener('submit', eventSubmit);
+
+//informação ao carregar a página
+window.onload = function () {
+    alert("Formulário aberto!");
+};
+
+
+// mouse event
+let input = document.querySelector(".preencher");
+
+input.onmouseover = function () {
+    this.style.backgroundColor = "#7d9a68";
+};
+
+input.onmouseout = function () {
+    this.style.backgroundColor = "#cb1e40";
+};
