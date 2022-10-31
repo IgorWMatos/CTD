@@ -111,6 +111,10 @@ body.dark .item {
   border-color: black;
 }
 
-body.dark h2 p {
+body.dark h2 {
+  color: rgb(230, 230, 230);
+}
+
+body.dark p {
   color: rgb(230, 230, 230);
 }
