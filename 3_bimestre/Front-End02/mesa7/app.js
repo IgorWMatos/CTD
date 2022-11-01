@@ -22,6 +22,8 @@ formulario.innerHTML += `
 </div>
 </form>`;
 
+console.log("teste");
+
 //interrupção do formulário
 function eventSubmit(event) {
     event.preventDefault();
@@ -30,18 +32,23 @@ function eventSubmit(event) {
 formulario.addEventListener('submit', eventSubmit);
 
 //informação ao carregar a página
-window.onload = function () {
+onload = function () {
     alert("Formulário aberto!");
+    console.log("teste");
 };
-
 
 // mouse event
-let input = document.querySelector(".preencher");
+let input1 = document.querySelector("#nome");
+let input2 = document.querySelector("#sobrenome");
+let input3 = document.querySelector("#email");
 
-input.onmouseover = function () {
+input.addEventListener('mouseover', function () {
     this.style.backgroundColor = "#7d9a68";
-};
-
-input.onmouseout = function () {
+})
+input.addEventListener('mouseout', function () {
     this.style.backgroundColor = "#cb1e40";
-};
+})
+
+// 5exercico
+
+// faça a contagem de teclas apertadas com uma variável increment hehe
